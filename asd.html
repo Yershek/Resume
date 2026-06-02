@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доктурбеков Азирет Жоомартович - Резюме</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0b0b;
+            --text-main: #d1d1d1;
+            --text-muted: #999;
+            --white: #ffffff;
+            --card-border: #2a2a2a;
+            --card-bg-solid: #3e4045;
+            --light-card-bg: #f9f9f9;
+            --light-card-text: #111;
+            --accent-blue: #a3c2e0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* Типографика */
+        h1, h2, h3, .serif-text {
+            font-family: 'Merriweather', serif;
+            font-weight: 400;
+        }
+
+        h1 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin: 0 0 15px 0;
+            letter-spacing: 0.5px;
+        }
+
+        strong, b {
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .exp-light strong {
+            color: #000;
+        }
+
+        /* Шапка профиля */
+        .badge-main {
+            display: inline-block;
+            background-color: #1f2124;
+            color: #b5b5b5;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #666;
+        }
+
+        .contact-info a:hover {
+            text-decoration-color: var(--white);
+        }
+
+        .separator {
+            color: #555;
+            margin: 0 5px;
+        }
+
+        .divider-line {
+            height: 1px;
+            background-color: #222;
+            margin: 25px 0 35px 0;
+        }
+
+        /* Заголовки секций */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.6rem;
+            color: var(--white);
+            margin-bottom: 25px;
+            margin-top: 50px;
+        }
+
+        .section-title span.icon {
+            font-size: 1.4rem;
+            opacity: 0.8;
+        }
+
+        .sub-title-serif {
+            font-family: 'Merriweather', serif;
+            font-size: 1.25rem;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        /* Сетки (Grid) */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        /* Карточки навыков */
+        .card-outline {
+            border: 1px solid var(--card-border);
+            border-radius: 6px;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        .card-outline h3 {
+            margin: 0 0 15px 0;
+            font-family: 'Merriweather', serif;
+            font-size: 1.1rem;
+            color: #ebdcb2; /* Слегка желтоватый оттенок из оригинала */
+        }
+        
+        .card-outline:nth-child(even) h3, 
+        .card-outline:nth-child(n+3) h3 {
+            color: var(--white); /* Сброс для остальных */
+        }
+
+        .card-solid {
+            background-color: var(--card-bg-solid);
+            border-radius: 6px;
+            padding: 20px 25px;
+        }
+
+        .card-solid h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.05rem;
+            color: #ebdcb2;
+        }
+
+        .card-solid p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Списки */
+        ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        li::marker {
+            color: var(--text-muted);
+        }
+
+        /* Опыт работы */
+        .exp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .exp-light {
+            background-color: var(--white);
+            color: var(--light-card-text);
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .exp-light h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+            color: #000;
+        }
+
+        .exp-light .job-meta {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .exp-light .job-desc {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .exp-light ul li {
+            color: #222;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+        
+        .exp-light ul li::marker {
+            color: #000;
+        }
+
+        .exp-dark {
+            padding: 5px 0;
+        }
+
+        .outline-badge {
+            display: inline-block;
+            border: 1px solid #555;
+            color: var(--text-main);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+
+        .exp-dark h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3rem;
+            color: var(--white);
+        }
+
+        .exp-dark .job-meta {
+            font-size: 0.85rem;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .exp-dark .job-desc {
+            font-size: 0.9rem;
+            color: #bbb;
+            margin-bottom: 20px;
+        }
+
+        .exp-dark ul li {
+            color: #bbb;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        /* Образование и языки */
+        .edu-lang-main-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.6rem;
+            color: var(--white);
+            margin-bottom: 40px;
+            margin-top: 50px;
+        }
+
+        .edu-lang-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .sub-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Merriweather', serif;
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 25px;
+        }
+
+        .edu-item h4 {
+            margin: 0 0 15px 0;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.5;
+        }
+
+        .edu-item p {
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .lang-item {
+            border-left: 3px solid var(--white);
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+
+        .lang-item h4 {
+            margin: 0 0 8px 0;
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--white);
+        }
+
+        .lang-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Адаптивность для мобильных */
+        @media (max-width: 768px) {
+            .grid-2, .grid-3, .exp-grid, .edu-lang-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-info {
+                line-height: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <header>
+        <h1>Доктурбеков Азирет Жоомартович</h1>
+        <div class="badge-main">JAVA BACKEND DEVELOPER</div>
+        <div class="contact-info">
+            📱 +996 509 313 108 · +996 221 266 582 <span class="separator">|</span>
+            ✉️ <a href="mailto:homohojel3@gmail.com">homohojel3@gmail.com</a> <span class="separator">|</span>
+            ✈️ <a href="#">@LaPon4ik</a> <span class="separator">|</span>
+            💻 <a href="#">Yershek</a> <span class="separator">|</span>
+            📅 06.02.2009
+        </div>
+    </header>
+
+    <div class="divider-line"></div>
+
+    <h2 class="section-title"><span class="icon">⚒️</span> Технические навыки</h2>
+    
+    <div class="grid-2">
+        <div class="card-outline">
+            <h3>Языки и основы</h3>
+            <ul>
+                <li>OOP, Java Core</li>
+                <li>Collection, Stream API</li>
+                <li>Reflection, SOLID</li>
+                <li>DI, IoC</li>
+            </ul>
+        </div>
+        <div class="card-outline">
+            <h3>Frameworks & Libraries</h3>
+            <ul>
+                <li>Spring Boot, Spring Core</li>
+                <li>Spring Web (REST API)</li>
+                <li>Spring Data JPA, Hibernate</li>
+                <li>Lombok, FlyWay, Swagger</li>
+            </ul>
+        </div>
+        <div class="card-outline">
+            <h3 style="color: #ebdcb2;">Безопасность</h3>
+            <ul>
+                <li>Spring Security</li>
+                <li>JWT-Token (Auth)</li>
+                <li>Настройка CORS</li>
+            </ul>
+        </div>
+        <div class="card-outline">
+            <h3 style="color: #ebdcb2;">Microservices & Cloud</h3>
+            <ul>
+                <li>Spring Cloud Gateway</li>
+                <li>Eureka, Config Server</li>
+            </ul>
+        </div>
+        <div class="card-outline">
+            <h3 style="color: #ebdcb2;">Базы данных и кеширование</h3>
+            <ul>
+                <li>PostgreSQL, SQL, JDBC</li>
+                <li>Redis</li>
+            </ul>
+        </div>
+        <div class="card-outline">
+            <h3 style="color: #ebdcb2;">Инструменты</h3>
+            <ul>
+                <li>Apache Kafka</li>
+                <li>MinIO, Git, Docker</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="sub-title-serif" style="margin-top: 30px;">Паттерны проектирования</h3>
+    <div class="grid-3">
+        <div class="card-solid">
+            <h3>Порождающие</h3>
+            <p>Factory Method · Abstract Factory · Builder · Prototype · Singleton</p>
+        </div>
+        <div class="card-solid">
+            <h3 style="color: #fff;">Структурные</h3>
+            <p>Adapter · Decorator · Proxy · Composite</p>
+        </div>
+        <div class="card-solid">
+            <h3 style="color: #fff;">Поведенческие</h3>
+            <p>Chain of Responsibility · Observer · State · Strategy</p>
+        </div>
+    </div>
+
+    <h2 class="section-title"><span class="icon">💼</span> Опыт разработки</h2>
+
+    <div class="exp-grid">
+        <div class="exp-light">
+            <h3>Федерация профсоюзов Кыргызстана</h3>
+            <div class="job-meta">Java Backend Developer · przk.kg</div>
+            <div class="job-desc">
+                Корпоративный информационный портал ЦК Профсоюза работников здравоохранения КР<br><br>
+                Разработка серверной части корпоративного портала для автоматизации документооборота, цифровизации взаимодействия с членами Профсоюза, удалённых консультаций и единой мультиязычной информационной экосистемы.
+            </div>
+            <ul>
+                <li>Спроектировал и реализовал серверную логику <strong>REST API</strong> для онлайн-подачи документов и заявок на вступление — устранил бумажную волокиту и оптимизировал процессы обработки данных</li>
+                <li>Настроил работу с <strong>S3-совместимым хранилищем MinIO</strong> для надёжного сохранения, структурирования и быстрого извлечения внутренних документов и пользовательских файлов</li>
+                <li>Разработал бэкенд-архитектуру для интерактивного <strong>FAQ чат-бота</strong>, обеспечивающего мгновенную выдачу автоматических ответов на типовые правовые и организационные вопросы граждан</li>
+                <li>Реализовал серверную часть модуля <strong>онлайн-записи на приём</strong> к профильным специалистам профсоюза, снизив барьеры для получения правовой поддержки</li>
+                <li>Внедрил механизм <strong>интернационализации (i18n)</strong> на уровне серверных ответов для динамической поддержки трёх языков интерфейса (кыргызский, русский, английский)</li>
+                <li>Оптимизировал структуру таблиц <strong>PostgreSQL</strong> для хранения учётных записей пользователей, логов обращений и контента информационной экосистемы</li>
+            </ul>
+        </div>
+
+        <div class="exp-dark">
+            <div class="outline-badge">Практика 1–2 курса</div>
+            <h3>Профессиональный лицей ИТ №99 при Президенте КР</h3>
+            <div class="job-meta">
+                <strong>Java Backend Developer</strong> · Информационная система «Система управления лицея»
+            </div>
+            <div class="job-desc">
+                Участие в разработке серверной части информационной системы лицея для отображения информации о жизнедеятельности учебного заведения, ведения учёта и квалификации сотрудников.
+            </div>
+            <ul>
+                <li>Принимал активное участие в проектировании структуры сущностей (<strong>Entities</strong>), создании <strong>DTO</strong> и контроллеров для ключевых модулей системы</li>
+                <li>Успешно решил проблемы с загрузкой и обработкой файлов, внедрив и реализовав интеграцию с технологией хранения данных <strong>MinIO</strong></li>
+                <li>Разработал кастомные исключения (<strong>Custom Exceptions</strong>) и настроил глобальный перехватчик ошибок при помощи <strong>АОП (Aspect-Oriented Programming)</strong>, обеспечив стандартизированный проброс локализованных ошибок на сторону клиента</li>
+                <li>Помогал главному разработчику в интеграции и настройке фреймворка <strong>Spring Security</strong>, включая конфигурацию CORS и генерацию/валидацию <strong>JWT-токенов</strong> для защищённого доступа к эндпоинтам</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="edu-lang-main-title"><span class="icon">🎓</span> Образование и языки</h2>
+    
+    <div class="edu-lang-grid">
+        <div>
+            <div class="sub-header"><span class="icon">🎓</span> Образование</div>
+            <div class="edu-item">
+                <h4>Профессиональный лицей информационных технологий №99 при Президенте КР</h4>
+                <p>Специальность: <strong>Backend-разработчик</strong></p>
+                <p>Студент 2 курса · Окончание: <strong>2026 год</strong></p>
+            </div>
+        </div>
+
+        <div>
+            <div class="sub-header"><span class="icon">🌐</span> Языки</div>
+            
+            <div class="lang-item">
+                <h4>Русский</h4>
+                <p>Родной / Свободный</p>
+            </div>
+            
+            <div class="lang-item">
+                <h4>Английский</h4>
+                <p>A2 / Pre-Intermediate — уверенно читаю техническую документацию</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
