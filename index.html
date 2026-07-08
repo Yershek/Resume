@@ -247,8 +247,8 @@
 
         .exp-highlight .badge-project {
             display: inline-block;
-            background-color: #111;
-            color: #ebdcb2;
+            background-color: #ffffff;
+            color: #000000;
             padding: 4px 10px;
             border-radius: 4px;
             font-size: 0.7rem;
@@ -256,6 +256,20 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 12px;
+        }
+
+        /* Практика 2 курса: белый фон, чёрный текст, чёрный контур — по запросу */
+        .exp-light .outline-badge {
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #000000;
+        }
+
+        /* Выравниваем бейдж «Практика 1 курса» (тёмная карточка, padding 5px)
+           с бейджем «Практика 2 курса» (светлая карточка, padding 30px) —
+           иначе они стоят на разной высоте */
+        .exp-dark .outline-badge {
+            margin-top: 25px;
         }
 
         .exp-dark {
@@ -572,7 +586,7 @@
     
     <div class="edu-lang-grid">
         <div>
-            <div class="sub-header"><span class="icon"></span>Образование</div>
+            <div class="sub-header"><span class="icon"></span> Образование</div>
             <div class="edu-item">
                 <h4>Профессиональный лицей информационных технологий №99 при Президенте КР</h4>
                 <p>Специальность: <strong>Backend-разработчик</strong></p>
@@ -581,7 +595,7 @@
         </div>
 
         <div>
-            <div class="sub-header"><span class="icon"></span>Языки</div>
+            <div class="sub-header"><span class="icon"></span> Языки</div>
             
             <div class="lang-item">
                 <h4>Русский</h4>
