@@ -219,6 +219,12 @@
             margin-bottom: 15px;
         }
 
+        .exp-light .job-meta a {
+            color: #000;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
         .exp-light .job-desc {
             font-size: 0.9rem;
             color: #333;
@@ -233,6 +239,23 @@
         
         .exp-light ul li::marker {
             color: #000;
+        }
+
+        .exp-highlight {
+            grid-column: 1 / -1;
+        }
+
+        .exp-highlight .badge-project {
+            display: inline-block;
+            background-color: #111;
+            color: #ebdcb2;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
         }
 
         .exp-dark {
@@ -488,6 +511,27 @@
     <h2 class="section-title"><span class="icon">💼</span> Опыт разработки</h2>
 
     <div class="exp-grid">
+
+        <div class="exp-light exp-highlight">
+            <div class="badge-project">Собственный проект</div>
+            <h3>Kyrgyz Central Medical Card (КЦМК)</h3>
+            <div class="job-meta">
+                Full-stack Developer (Java / Spring Boot + React) ·
+                <a href="https://github.com/Sweezy352/KyrgyzCentralMedicalCard/tree/dev" target="_blank" rel="noopener">GitHub-репозиторий</a>
+            </div>
+            <div class="job-desc">
+                Единая централизованная электронная медицинская карта гражданина, объединяющая данные клиник и работодателей в одном защищённом информационном пространстве. Пациент — полноправный владелец своих медицинских данных; идентификация выполняется по ИНН, доступ организациям предоставляется строго на основании согласия пациента.
+            </div>
+            <ul>
+                <li>Спроектировал и реализовал <strong>трёхзвенную архитектуру</strong> приложения: клиент на <strong>React 18</strong> (SPA, Vite, Axios), сервер на <strong>Java / Spring Boot</strong> (REST API, слои контроллер → сервис → репозиторий), хранение данных — <strong>PostgreSQL</strong> и объектное S3-совместимое хранилище <strong>MinIO</strong> для файлов диагнозов</li>
+                <li>Реализовал <strong>ролевую модель безопасности</strong> на базе Spring Security и JWT с разграничением доступа для 7 ролей (ADMIN, USER, DOCTOR, NURSE, PHARMACIST, CLINIC_ADMIN, COMPANY_HR)</li>
+                <li>Разработал <strong>B2B-блок</strong> системы: регистрацию организаций (клиник и работодателей), привязку персонала к организациям, учёт групп здоровья сотрудников и агрегированную корпоративную аналитику</li>
+                <li>Внедрил модуль <strong>управления согласиями пациентов</strong> и неизменяемое журналирование обращений к медицинским данным (таблица access_logs) для соответствия требованиям защиты персональных данных</li>
+                <li>Провёл рефакторинг кодовой базы: удалил неактуальные подсистемы (страхование, новости, товары) миграциями <strong>Flyway</strong>, автоматизировал логику создания визитов и переработал панель администратора в удобный интерфейс с 5 специализированными вкладками</li>
+                <li>Настроил маппинг DTO через <strong>MapStruct</strong>, версионирование схемы БД через Flyway и контейнеризацию окружения (<strong>Docker, Docker Compose</strong>)</li>
+            </ul>
+        </div>
+
         <div class="exp-light">
             <h3>Федерация профсоюзов Кыргызстана</h3>
             <div class="job-meta">Java Backend Developer · przk.kg</div>
