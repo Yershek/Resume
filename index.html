@@ -125,6 +125,7 @@
         }
 
         /* Сетки (Grid) */
+
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -458,70 +459,48 @@
     <h2 class="section-title"><span class="icon"></span> Технические навыки</h2>
     
     <div class="grid-2">
-        <div class="card-outline">
-            <h3>Языки и основы</h3>
-            <ul>
-                <li>OOP, Java Core</li>
-                <li>Collection, Stream API</li>
-                <li>Reflection, SOLID</li>
-                <li>DI, IoC</li>
-            </ul>
-        </div>
-        <div class="card-outline">
-            <h3>Frameworks & Libraries</h3>
-            <ul>
-                <li>Spring Boot, Spring Core</li>
-                <li>Spring Web (REST API)</li>
-                <li>Spring Data JPA, Hibernate</li>
-                <li>Lombok, FlyWay, Swagger</li>
-            </ul>
-        </div>
-        <div class="card-outline">
-            <h3 style="color: #ebdcb2;">Безопасность</h3>
-            <ul>
-                <li>Spring Security</li>
-                <li>JWT-Token (Auth)</li>
-                <li>Настройка CORS</li>
-            </ul>
-        </div>
-        <div class="card-outline">
-            <h3 style="color: #ebdcb2;">Microservices & Cloud</h3>
-            <ul>
-                <li>Spring Cloud Gateway</li>
-                <li>Eureka, Config Server</li>
-            </ul>
-        </div>
-        <div class="card-outline">
-            <h3 style="color: #ebdcb2;">Базы данных и кеширование</h3>
-            <ul>
-                <li>PostgreSQL, SQL, JDBC</li>
-                <li>Redis</li>
-            </ul>
-        </div>
-        <div class="card-outline">
-            <h3 style="color: #ebdcb2;">Инструменты</h3>
-            <ul>
-                <li>Apache Kafka</li>
-                <li>MinIO, Git, Docker</li>
-            </ul>
-        </div>
+    <div class="card-outline">
+        <h3 style="color: #ebdcb2;">Язык и базовые технологии</h3>
+        <ul>
+            <li>Java Core (OOP, Collections, Stream API, Reflection API)</li>
+        </ul>
     </div>
 
-    <h3 class="sub-title-serif" style="margin-top: 30px;">Паттерны проектирования</h3>
-    <div class="grid-3">
-        <div class="card-solid">
-            <h3>Порождающие</h3>
-            <p>Factory Method · Abstract Factory · Builder · Prototype · Singleton</p>
-        </div>
-        <div class="card-solid">
-            <h3 style="color: #fff;">Структурные</h3>
-            <p>Adapter · Decorator · Proxy · Composite</p>
-        </div>
-        <div class="card-solid">
-            <h3 style="color: #fff;">Поведенческие</h3>
-            <p>Chain of Responsibility · Observer · State · Strategy</p>
-        </div>
+    <div class="card-outline">
+        <h3 style="color: #ebdcb2;">Фреймворки и экосистема</h3>
+        <ul>
+            <li>Spring Framework: Boot, Core, Web (REST API), Data JPA, Security (JWT, CORS)</li>
+        </ul>
     </div>
+
+    <div class="card-outline">
+        <h3 style="color: #ebdcb2;">Базы данных и ORM</h3>
+        <ul>
+            <li>Hibernate, PostgreSQL, SQL, JDBC, Flyway</li>
+        </ul>
+    </div>
+
+    <div class="card-outline">
+        <h3 style="color: #ebdcb2;">Архитектура и проектирование</h3>
+        <ul>
+            <li>Принципы SOLID, шаблоны проектирования (IoC/DI, Singleton, Factory, Proxy, Builder)</li>
+        </ul>
+    </div>
+
+    <div class="card-outline">
+        <h3 style="color: #ebdcb2;">Инструменты и кеширование</h3>
+        <ul>
+            <li>Apache Kafka, Redis, Docker & Docker Compose, MinIO, Git, Swagger (OpenAPI)</li>
+        </ul>
+    </div>
+
+    <div class="card-outline">
+        <h3 style="color: #ebdcb2;">Микросервисы и облачные технологии</h3>
+        <ul>
+            <li>Spring Cloud (Gateway, Eureka, Config Server)</li>
+        </ul>
+    </div>
+</div>
 
     <h2 class="section-title"><span class="icon"></span> Опыт разработки</h2>
 
@@ -535,14 +514,14 @@
                 <a href="https://github.com/Sweezy352/KyrgyzCentralMedicalCard/tree/dev" target="_blank" rel="noopener">GitHub-репозиторий</a>
             </div>
             <div class="job-desc">
-                Единая централизованная электронная медицинская карта гражданина, объединяющая данные клиник и работодателей в одном защищённом информационном пространстве. Пациент — полноправный владелец своих медицинских данных; идентификация выполняется по ИНН, доступ организациям предоставляется строго на основании согласия пациента.
+                Электронная медицинская карта, которая объединяет данные из клиник и от работодателей в одном месте. Пациент сам решает, кому давать доступ к своим данным: идентификация — по ИНН, доступ клиникам и организациям открывается только с его согласия.
             </div>
             <ul>
-                <li>Спроектировал и реализовал <strong>трёхзвенную архитектуру</strong> приложения: клиент на <strong>React 18</strong> (SPA, Vite, Axios), сервер на <strong>Java / Spring Boot</strong> (REST API, слои контроллер → сервис → репозиторий), хранение данных — <strong>PostgreSQL</strong> и объектное S3-совместимое хранилище <strong>MinIO</strong> для файлов диагнозов</li>
+                <li>Спроектировал и реализовал: сервер на <strong>Java / Spring Boot</strong> (REST API, слои контроллер → сервис → репозиторий), хранение данных — <strong>PostgreSQL</strong> и объектное S3-совместимое хранилище <strong>MinIO</strong> для файлов диагнозов</li>
                 <li>Реализовал <strong>ролевую модель безопасности</strong> на базе Spring Security и JWT с разграничением доступа для 7 ролей (ADMIN, USER, DOCTOR, NURSE, PHARMACIST, CLINIC_ADMIN, COMPANY_HR)</li>
-                <li>Разработал <strong>B2B-блок</strong> системы: регистрацию организаций (клиник и работодателей), привязку персонала к организациям, учёт групп здоровья сотрудников и агрегированную корпоративную аналитику</li>
-                <li>Внедрил модуль <strong>управления согласиями пациентов</strong> и неизменяемое журналирование обращений к медицинским данным (таблица access_logs) для соответствия требованиям защиты персональных данных</li>
-                <li>Провёл рефакторинг кодовой базы: удалил неактуальные подсистемы (страхование, новости, товары) миграциями <strong>Flyway</strong>, автоматизировал логику создания визитов и переработал панель администратора в удобный интерфейс с 5 специализированными вкладками</li>
+                <li>Разработал <strong>B2B-блок</strong> системы: регистрацию организаций (клиник и работодателей), привязку персонала к организациям, учёт групп здоровья сотрудников и аналитику по компаниям</li>
+                <li>Внедрил модуль <strong>управления согласиями пациентов</strong> и неизменяемое журналирование обращений к медицинским данным (таблица access_logs) — видно, кто и когда открывал карту пациента</li>
+                <li>Отрефакторил БД — убрал таблицы неактуальных подсистем через миграции <strong>Flyway</strong>, автоматизировал создание визитов и переделал панель администратора: теперь это интерфейс с 5 отдельными вкладками</li>
                 <li>Настроил маппинг DTO через <strong>MapStruct</strong>, версионирование схемы БД через Flyway и контейнеризацию окружения (<strong>Docker, Docker Compose</strong>)</li>
             </ul>
         </div>
@@ -553,15 +532,15 @@
             <div class="job-meta">Java Backend Developer · przk.kg</div>
             <div class="job-desc">
                 Корпоративный информационный портал ЦК Профсоюза работников здравоохранения КР<br><br>
-                Разработка серверной части корпоративного портала для автоматизации документооборота, цифровизации взаимодействия с членами Профсоюза, удалённых консультаций и единой мультиязычной информационной экосистемы.
+                Разработка серверной части портала: автоматизация документооборота, онлайн-взаимодействие с членами профсоюза, дистанционные консультации и поддержка нескольких языков интерфейса.
             </div>
             <ul>
-                <li>Спроектировал и реализовал серверную логику <strong>REST API</strong> для онлайн-подачи документов и заявок на вступление — устранил бумажную волокиту и оптимизировал процессы обработки данных</li>
-                <li>Настроил работу с <strong>S3-совместимым хранилищем MinIO</strong> для надёжного сохранения, структурирования и быстрого извлечения внутренних документов и пользовательских файлов</li>
-                <li>Разработал бэкенд-архитектуру для интерактивного <strong>FAQ чат-бота</strong>, обеспечивающего мгновенную выдачу автоматических ответов на типовые правовые и организационные вопросы граждан</li>
-                <li>Реализовал серверную часть модуля <strong>онлайн-записи на приём</strong> к профильным специалистам профсоюза, снизив барьеры для получения правовой поддержки</li>
+                <li>Спроектировал и реализовал серверную логику <strong>REST API</strong> для онлайн-подачи документов и заявок на вступление — теперь это можно сделать без бумажных бланков</li>
+                <li>Настроил работу с <strong>S3-совместимым хранилищем MinIO</strong> для хранения внутренних документов и пользовательских файлов</li>
+                <li>Разработал бэкенд-архитектуру для <strong>FAQ чат-бота</strong>, который отвечает на частые вопросы по трудовому праву и работе профсоюза</li>
+                <li>Реализовал серверную часть модуля <strong>онлайн-записи на приём</strong> к профильным специалистам профсоюза</li>
                 <li>Внедрил механизм <strong>интернационализации (i18n)</strong> на уровне серверных ответов для динамической поддержки трёх языков интерфейса (кыргызский, русский, английский)</li>
-                <li>Оптимизировал структуру таблиц <strong>PostgreSQL</strong> для хранения учётных записей пользователей, логов обращений и контента информационной экосистемы</li>
+                <li>Оптимизировал структуру таблиц <strong>PostgreSQL</strong> для хранения учётных записей пользователей, логов обращений и контента портала</li>
             </ul>
         </div>
 
@@ -572,12 +551,12 @@
                 <strong>Java Backend Developer</strong> · Информационная система «Система управления лицея»
             </div>
             <div class="job-desc">
-                Участие в разработке серверной части информационной системы лицея для отображения информации о жизнедеятельности учебного заведения, ведения учёта и квалификации сотрудников.
+                Участие в разработке серверной части информационной системы лицея: отображение новостей и информации о лицее, учёт квалификации сотрудников.
             </div>
             <ul>
                 <li>Принимал активное участие в проектировании структуры сущностей (<strong>Entities</strong>), создании <strong>DTO</strong> и контроллеров для ключевых модулей системы</li>
-                <li>Успешно решил проблемы с загрузкой и обработкой файлов, внедрив и реализовав интеграцию с технологией хранения данных <strong>MinIO</strong></li>
-                <li>Разработал кастомные исключения (<strong>Custom Exceptions</strong>) и настроил глобальный перехватчик ошибок при помощи <strong>АОП (Aspect-Oriented Programming)</strong>, обеспечив стандартизированный проброс локализованных ошибок на сторону клиента</li>
+                <li>Решил проблемы с загрузкой и обработкой файлов, внедрив интеграцию с <strong>MinIO</strong></li>
+                <li>Разработал кастомные исключения (<strong>Custom Exceptions</strong>) и настроил глобальный перехватчик ошибок при помощи <strong>АОП (Aspect-Oriented Programming)</strong> — клиент получает единообразные локализованные сообщения об ошибках</li>
                 <li>Помогал главному разработчику в интеграции и настройке фреймворка <strong>Spring Security</strong>, включая конфигурацию CORS и генерацию/валидацию <strong>JWT-токенов</strong> для защищённого доступа к эндпоинтам</li>
             </ul>
         </div>
